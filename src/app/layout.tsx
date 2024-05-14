@@ -1,7 +1,8 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import '../common.scss';
+import { Space_Grotesk } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const SpaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +16,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <title>Rigved Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A portfolio website of Frontend Developer Rigved Shrivastava" />
+        <meta name="keywords" content="Rigved Shrivastava, Rigved, Frontend Developer, Frontend, Frontend Development, Full Stack Developer, MERN Stack Developer" />
+        <meta property="og:title" content="Rigved portfolio" />
+        <meta property="og:description" content="A portfolio website of Frontend Developer Rigved Shrivastava" />
+        {/* <meta property="og:image" content="image_url_here" /> */}
+        {/* <link rel="icon" href="path/to/favicon.ico" /> */}
+        {/* <link rel="canonical" href="https://www.example.com/your-page"> */}
+      </head>
+      <body className={SpaceGrotesk.className}>{children}</body>
     </html>
   )
 }
