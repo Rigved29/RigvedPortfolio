@@ -1,6 +1,8 @@
 :root {
-    --PrimaryWhite: '#FFFFFF';
-    --PrimaryBlack: '#000000';
+    --PrimaryWhite: #FFFFFF;
+    --PrimaryBlack: #000000;
+    --PrimaryYellow: #e5de00;
+    --BrightYellow: #e8e337;
 }
 
 .heading1 {
@@ -8,4 +10,198 @@
     font-weight: 700;
     line-height: normal;
     margin-block: 5px;
+}
+
+.heading2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+    margin-block: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.squareBtn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.squareBtn:hover {
+    padding: 12px 20px;
+    animation: alarming 0.5s ease-in-out 2;
+    box-shadow: 0 0 20px #e6e15b;
+}
+
+
+/* Keyframes for alarming effect */
+@keyframes alarming {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.blurredbgBox {
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(128, 128, 128, 0.3);
+    padding: 10px;
+}
+
+//margin
+
+.margin-block-30 {
+    margin-block: 30px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+
+//padding
+.p-20 {
+    padding: 20px;
+}
+
+.p-left-20 {
+    padding-left: 20px;
+}
+
+//bg
+
+.bg-yellow {
+    background-color: var(--PrimaryYellow);
+}
+
+//color
+
+.color-black {
+    color: var(--PrimaryBlack);
+}
+
+.color-yellow {
+    color: var(--PrimaryYellow);
+}
+
+//fonts
+
+.font-size-large {
+    font-size: 1.2rem;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+//width
+
+.w-25per {
+    width: 25%;
+}
+
+.w-30per {
+    width: 30%;
+}
+
+.w-100per {
+    width: 100%;
+}
+
+//display
+
+.d-flex {
+    display: flex;
+}
+
+.flex-d-col {
+    flex-direction: column;
+}
+
+.flex-d-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.g-5 {
+    gap: 5px;
+}
+
+.g-10 {
+    gap: 10px;
+}
+
+.g-20 {
+    gap: 20px;
+}
+
+.g-30 {
+    gap: 30px;
+}
+
+.g-40 {
+    gap: 40px;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.jc-start {
+    justify-content: flex-start;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+
+//miscellaneous 
+
+.line-height-normal {
+    line-height: 1.2;
+}
+
+.line-height-large {
+    line-height: 1.5;
 }
