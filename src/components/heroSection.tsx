@@ -5,7 +5,7 @@ const HeroSection = () => {
 
     return (
         <section>
-            <div className="text-center line-height-large">
+            <div className="text-center line-height-large h-300">
                 <div className="heading1">
                     <h1>Hey, It's Rigved.</h1>
                     <h1>MERN Stack Developer</h1>
