@@ -19,6 +19,13 @@
     margin-block: 5px;
 }
 
+.heading3 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+    margin-block: 5px;
+}
+
 .text-center {
     text-align: center;
 }
@@ -71,12 +78,21 @@
     margin-block: 30px;
 }
 
+.margin-block-20 {
+    margin-block: 20px;
+}
+
 .margin-right-20 {
     margin-right: 20px;
 }
 
 
 //padding
+
+.p-block-30 {
+    padding-block: 30px;
+}
+
 .p-20 {
     padding: 20px;
 }
