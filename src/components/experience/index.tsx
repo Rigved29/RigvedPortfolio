@@ -1,23 +1,51 @@
+'use client';
 import { companies } from "@/constants";
 import Image from "next/image";
+import { motion } from 'framer-motion';
+import { useState } from "react";
+
+
+
+
+const CompanyLogo = ({ company, i, handleHover }: any) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const companyName = company.name;
+
+    switch (companyName) {
+        case 'Febi.ai':
+            return (
+                // <div className="d-flex jc-center flex-d-col">
+                //     <div className="d-flex align-items-center g-10 jc-center">
+                //         <Image src={company.path} width="50" height="50" alt="Febi.ai" /><span className="font-weight-700 font-size-xl">Febi.ai</span>
+                //     </div>
+                //     <p className="text">
+                //         Currently Working
+                //     </p>
+                // </div>
+                <div className="d-flex align-items-center g-10 jc-center">
+                    <Image src={company.path} width="50" height="50" alt="Febi.ai" /><span className="font-weight-700 font-size-xl">Febi.ai</span>
+                </div>
+            );
+        default:
+            return (<Image alt={company.name} src={company.path} width={200} height={110} key={i} className="margin-inline-auto" />)
+    }
+}
 
 const Experience = () => {
 
+    const handleHover = (name: string, currentCompany: boolean) => {
+        if (currentCompany) {
+            console.log('line8', name);
+        }
+    }
+
     return (
-        <section className="p-block-30">
-            <h1 className="heading2 text-center">Experience</h1>
-            <p className="text-center heading3 margin-block-20">I'm proud to have collaborated with some awesome companies:</p>
-            <div className="d-flex jc-space-between margin-block-30">
-                {companies.map((company, i) => {
-                    if (company.name === 'Febi.ai') {
-                        return (
-                            <div className="d-flex align-items-center g-10 jc-center">
-                                <Image src={company.path} width="41" height="50" alt="Febi.ai" />Febi.ai</div>
-                        )
-                    } else {
-                        return <Image alt={company.name} src={company.path} width={150} height={75} key={i} />
-                    }
-                })}
+        <section className="p-block-60">
+            <h1 className="heading2 text-center">I'm proud to have collaborated with some <br />awesome companies</h1>
+            {/* <p className="text-center heading3 margin-block-20">I'm proud to have collaborated with some awesome companies:</p> */}
+            <div className="companiesDiv">
+                {companies.map((company, i) => <CompanyLogo company={company} idx={i} handleHover={handleHover} />)}
             </div>
         </section>
     )

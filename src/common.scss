@@ -5,6 +5,24 @@
     --BrightYellow: #e8e337;
 }
 
+@mixin repeatColsRows($cols: 3, $rows: 3) {
+    grid-template-columns: repeat($cols, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+}
+
+@mixin customMargin($top, $right, $bottom, $left) {
+    margin: $top $right $bottom $left
+}
+
+@mixin customWidth($val) {
+    width: $val;
+}
+
+@mixin customHeight($val) {
+    height: $val;
+}
+
+
 .heading1 {
     font-size: 3rem;
     font-weight: 700;
@@ -86,11 +104,26 @@
     margin-right: 20px;
 }
 
+.margin-inline-auto {
+    margin-inline: auto;
+}
+
+.margin-right-20per {
+    @include customMargin(0px, 20%, 0px, 0px)
+}
 
 //padding
 
 .p-block-30 {
     padding-block: 30px;
+}
+
+.p-block-60 {
+    padding-block: 60px;
+}
+
+.p-block-90 {
+    padding-block: 90px;
 }
 
 .p-20 {
@@ -127,6 +160,10 @@
     font-size: 1.2rem;
 }
 
+.font-size-xl {
+    font-size: 2rem;
+}
+
 .font-weight-500 {
     font-weight: 500;
 }
@@ -145,14 +182,32 @@
     width: 30%;
 }
 
+.w-80per {
+    @include customWidth(80%)
+}
+
 .w-100per {
     width: 100%;
 }
+
+.w-200 {
+    @include customWidth(200px)
+}
+
+.w-600 {
+    @include customWidth(600px)
+}
+
+
 
 //height
 
 .h-300 {
     height: 300px;
+}
+
+.h-200 {
+    @include customHeight(400px);
 }
 
 //display
@@ -221,6 +276,19 @@
     justify-content: flex-end;
 }
 
+//Grid
+
+.d-grid {
+    display: grid;
+}
+
+.Cols-4-Rows-1 {
+    @include repeatColsRows(4, 1);
+}
+
+.ColsRows-2 {
+    @include repeatColsRows(2, 2);
+}
 
 //miscellaneous 
 
@@ -269,4 +337,41 @@
     border: 2px solid var(--PrimaryYellow);
     color: var(--PrimaryYellow);
     height: 40px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .companiesDiv {
+        display: grid;
+        gap: 20px;
+        @include repeatColsRows(2, 2)
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .companiesDiv {
+        display: grid;
+        gap: 20px;
+        @include repeatColsRows(4, 1)
+    }
+}
+
+.projectCardParent {
+    width: 250px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.projectCard {
+    width: 250px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.projectCard:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    /* Adjust the scale value as needed */
 }
