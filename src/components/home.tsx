@@ -2,6 +2,7 @@ import Experience from "../components/experience/index";
 import HeroSection from "./heroSection"
 import Navbar from "./navbar";
 import SkillsSection from "./skills/skills";
+import Testimonial from "./testimonials";
 import Works from "./works";
 
 const HomeComp = () => {
@@ -12,6 +13,7 @@ const HomeComp = () => {
             <SkillsSection />
             <Experience />
             <Works />
+            <Testimonial />
         </main>
     )
 

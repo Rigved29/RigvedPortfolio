@@ -13,7 +13,7 @@ const ProjectCard = ({ imagePath, name, description }: projectCardTypes) => {
                     <span>{name}</span>
                 </div>
             </div>
-            <p>{description}</p>
+            <p className="margin-block-20 text-center">{description}</p>
         </div>
     )
 
