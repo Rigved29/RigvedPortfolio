@@ -5,20 +5,22 @@ interface testimonialpropsTypes {
     imgPath: any;
     name: string;
     designation: string;
+    current: number;
+    idx: number;
 }
 
-const TestimonialCard = ({ description, imgPath, name, designation }: testimonialpropsTypes) => {
+const TestimonialCard = ({ description, imgPath, name, designation, current, idx }: testimonialpropsTypes) => {
 
     return (
 
-        <div>
-            <div>
-                {description}
+        <div className={`testimonialCard ${idx === current ? 'scaleUp' : ''}`}>
+            <div className="mb-30">
+                <p dangerouslySetInnerHTML={{ __html: description }} />
             </div>
-            <div>
-                <Image src={imgPath} alt={`img-${name}`} width={50} height={50} />
-                <div>
-                    <span>{name}</span>
+            <div className="margin-block-20 d-flex jc-start g-10 align-items-center">
+                <Image src={imgPath} alt={`img-${name}`} width={50} height={50} className="br-50per" />
+                <div className="d-flex flex-d-col">
+                    <span className="color-white font-weight-500">{name}</span>
                     <span>{designation}</span>
                 </div>
             </div>
