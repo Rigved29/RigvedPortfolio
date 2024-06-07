@@ -25,7 +25,7 @@ const SkillsSection = () => {
 
 
     return (
-        <section className="p-block-60">
+        <section className="p-block-60 p-inline-6rem">
             <h1 className="heading2 text-center">Skills</h1>
             <div className="margin-block-30 d-flex jc-space-between g-20 flex-wrap">
                 <BlurredBgBox classes="w-30per" children={<SkillsBox category='Front-End Development' skills={SKILLS['frontend']} icon={<CgWebsite />} />} />

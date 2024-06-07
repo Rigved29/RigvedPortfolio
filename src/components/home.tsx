@@ -4,16 +4,18 @@ import Navbar from "./navbar";
 import SkillsSection from "./skills/skills";
 import Testimonial from "./testimonials";
 import Works from "./works";
+import Contact from "./contact";
 
 const HomeComp = () => {
 
     return (
-        <main className="p-6rem">
+        <main className="p-block-6rem">
             <HeroSection />
             <SkillsSection />
             <Experience />
             <Works />
             <Testimonial />
+            <Contact />
         </main>
     )
 
