@@ -8,6 +8,7 @@
     --BrightYellow: #e8e337;
     --StoneBlue: #2c353f;
     --BluishDark: #0d151e;
+    --DarkBlue: #11263f;
 }
 
 @mixin repeatColsRows($cols: 3, $rows: 3) {
@@ -109,6 +110,14 @@
     margin-block: 20px;
 }
 
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
 .mb-20 {
     margin-bottom: 20px;
 }
@@ -169,6 +178,10 @@
 
 //bg
 
+.bg-white {
+    background-color: var(--PrimaryWhite);
+}
+
 .bg-yellow {
     background-color: var(--PrimaryYellow);
 }
@@ -179,6 +192,10 @@
 
 .bg-BluishDark {
     background-color: var(--BluishDark);
+}
+
+.bg-darkBlue {
+    background-color: var(--DarkBlue);
 }
 
 //color
@@ -195,6 +212,9 @@
     color: var(--PrimaryWhite);
 }
 
+.color-gray-l {
+    color: var(--LightGrey);
+}
 
 
 //fonts
@@ -205,6 +225,18 @@
 
 .font-size-xl {
     font-size: 2rem;
+}
+
+.font-size-10 {
+    font-size: 10px;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.font-size-14 {
+    font-size: 14px;
 }
 
 .font-weight-500 {
@@ -235,6 +267,10 @@
 
 .w-200 {
     @include customWidth(200px)
+}
+
+.w-100 {
+    @include customWidth(100px);
 }
 
 .w-600 {
@@ -281,6 +317,10 @@
 
 .align-items-center {
     align-items: center;
+}
+
+.align-items-stretch {
+    align-items: stretch;
 }
 
 .g-5 {
@@ -343,13 +383,43 @@
     border-radius: 50%;
 }
 
-//
+.br-20 {
+    border-radius: 20px;
+}
+
+.br-10 {
+    border-radius: 10px;
+}
+
+.br-5 {
+    border-radius: 5px;
+}
+
+//position
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: relative;
+}
+
+.right-10 {
+    right: 10px;
+}
+
+
+//miscellaneous 
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
 
 .cursor-pointer {
     cursor: pointer;
 }
-
-//miscellaneous 
 
 .line-height-normal {
     line-height: 1.2;
@@ -462,4 +532,59 @@
     @extend .testimonialCard;
     z-index: 999;
     scale: 1.2;
+}
+
+.inputClass {
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid var(--LightGrey);
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+.selectBtn {
+    @extend .inputClass;
+    cursor: pointer;
+    user-select: none;
+}
+
+.selectBtn input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.selectBtn input[type="checkbox"]:checked+span {
+    background-color: #007bff;
+    color: white;
+}
+
+.selectBtn span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.inputs {
+    @extend .inputClass;
+}
+
+.inputs::placeholder {
+    color: var(--PrimaryWhite);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.inputs[name='message'] {
+    height: 100px;
+}
+
+.inputs[name='message']::placeholder {
+    position: absolute;
+    top: 10px;
+}
+
+.inputs[type='file'] {
+    opacity: 0;
+    cursor: pointer;
 }
