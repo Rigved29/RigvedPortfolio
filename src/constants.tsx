@@ -12,6 +12,14 @@ import mukesh from '../public/assets/Testimonial/mukesh.jpg';
 import hemant from '../public/assets/Testimonial/Hemant.jpg';
 import santosh from '../public/assets/Testimonial/Santhosh_pic.png';
 
+//social media logos
+import instagramLogo from '../public/assets/Social_logos/insta_logo.svg';
+import fbLogo from '../public/assets/Social_logos/fb_logo.svg';
+import twitterLogo from '../public/assets/Social_logos/twiiter_logo.svg';
+import linkedinLogo from '../public/assets/Social_logos/linkedin_logo.svg';
+import GithubLogo from '../public/assets/Social_logos/github_logo.svg';
+
+
 export const SKILLS = {
     frontend: ['Javascript', 'Reactjs', 'NextJS', 'Typescript', 'HTML', 'CSS', 'SCSS', 'Redux', 'Redux Saga', 'Bootstrap', 'Tailwind', 'Materialui'],
     backend: ['Javascript', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'JWT'],
@@ -25,3 +33,6 @@ export const companies = [{ name: "Febi.ai", path: febiLogo, current: true }, { 
 export const projects = [{ name: 'Your Notes', path: yourNotes, description: 'An online Note Making App.' }, { name: 'Video Chat', path: videoChat, description: 'A video calling Web app.' }, { name: 'Birthday Greetings', path: birthday, description: 'Wish your loved ones on birthday in a nerdy way.' }, { name: 'Designer', path: Designer, description: 'A Designer\'s Portfolio' }]
 
 export const testimonials = [{ name: 'Mukesh Maurya', description: "Rigved has worked with me as full time developer for over eight months; <span class='color-white'>he is enthusiastic about technology and always ready for new challenges. He is a person that you can rely on</span>, and I highly recommend him.", imgPath: mukesh, designation: 'Founder at Frontendone' }, { name: 'Hemant Shrivastava', description: "Rigved has worked with me as full time developer for over eight months; <span class='color-white'>he is enthusiastic about technology and always ready for new challenges. He is a person that you can rely on</span>, and I highly recommend him.", imgPath: hemant, designation: 'Founder at Sociocharge' }, { name: 'Simon Santosh', description: "Rigved has worked with me as full time developer for over eight months; <span class='color-white'>he is enthusiastic about technology and always ready for new challenges. He is a person that you can rely on</span>, and I highly recommend him.", imgPath: santosh, designation: 'UI/UX Designer' }]
+
+
+export const socialMediaHandles = [{ name: 'Linkedin', imgPath: linkedinLogo, link: '#' }, { name: 'Github', imgPath: GithubLogo, link: '#' }, { name: 'Instagram', imgPath: instagramLogo, link: '#' }]
