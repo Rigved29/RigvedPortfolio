@@ -10,7 +10,7 @@ const Works = () => {
                 <h1 className="heading1">My Beautiful <br /> Works</h1>
             </div>
             <div className='d-grid ColsRows-2 p-block-60 g-20 w-600 margin-inline-auto'>
-                {projects.map((project) => <ProjectCard imagePath={project.path} name={project.name} description={project.description} />)}
+                {projects.map((project) => <ProjectCard imagePath={project.path} name={project.name} description={project.description} link={project.link} />)}
             </div>
         </section>
     )

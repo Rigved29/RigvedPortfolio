@@ -491,13 +491,52 @@
     background-color: var(--PrimaryWhite);
 }
 
+// .download-btn {
+//     padding: 10px 20px;
+//     cursor: pointer;
+//     border: none;
+//     transition: width 2s ease-out;
+// }
+
+// .download-btn:hover {
+//     border: 2px solid var(--PrimaryYellow);
+//     color: var(--PrimaryYellow);
+//     height: 40px;
+//     width: 50px;
+// }
+
 .download-btn {
-    padding: 10px 20px;
-    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0px 10px;
     cursor: pointer;
+    border: none;
+    transition: width 0.3s ease;
+    width: 40px;
     border: 2px solid var(--PrimaryYellow);
     color: var(--PrimaryYellow);
     height: 40px;
+}
+
+
+.download-btn .text {
+    margin-left: 10px;
+    translate: 200px 0px;
+    display: none;
+    white-space: nowrap;
+    transition: translate 0.3s ease;
+}
+
+.download-btn:hover {
+    width: 110px;
+    height: 40px;
+}
+
+.download-btn:hover .text {
+    display: inline-flex;
+    translate: 0px 0px;
 }
 
 @media only screen and (max-width: 1024px) {

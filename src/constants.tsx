@@ -18,6 +18,9 @@ import fbLogo from '../public/assets/Social_logos/fb_logo.svg';
 import twitterLogo from '../public/assets/Social_logos/twiiter_logo.svg';
 import linkedinLogo from '../public/assets/Social_logos/linkedin_logo.svg';
 import GithubLogo from '../public/assets/Social_logos/github_logo.svg';
+import { link } from 'fs';
+
+export const primaryYellow = "#e5de00";
 
 
 export const SKILLS = {
@@ -30,9 +33,9 @@ export const SKILLS = {
 export const companies = [{ name: "Febi.ai", path: febiLogo, current: true }, { name: "Intellemo", path: intellemoLogo, current: false }, { name: "Frontendone", path: frontendoneLogo, current: false }, { name: "Sociocharge", path: SociochargeLogo, current: false }];
 
 
-export const projects = [{ name: 'Your Notes', path: yourNotes, description: 'An online Note Making App.' }, { name: 'Video Chat', path: videoChat, description: 'A video calling Web app.' }, { name: 'Birthday Greetings', path: birthday, description: 'Wish your loved ones on birthday in a nerdy way.' }, { name: 'Designer', path: Designer, description: 'A Designer\'s Portfolio' }]
+export const projects = [{ name: 'Designer', path: Designer, description: 'A Designer\'s Portfolio', link: 'http://uxdesaner.netlify.app' }, { name: 'Your Notes', path: yourNotes, description: 'An online Note Making App.', link: 'https://your-notes-chi.vercel.app/allnotes' }, { name: 'Video Chat', path: videoChat, description: 'A video calling Web app.', link: 'https://video-chat-app-rho.vercel.app/' }, { name: 'Birthday Greetings', path: birthday, description: 'Wish your loved ones on birthday in a nerdy way.', link: 'https://birthday-wish-alpha.vercel.app/' }]
 
 export const testimonials = [{ name: 'Mukesh Maurya', description: "Rigved has worked with me as full time developer for over eight months; <span class='color-white'>he is enthusiastic about technology and always ready for new challenges. He is a person that you can rely on</span>, and I highly recommend him.", imgPath: mukesh, designation: 'Founder at Frontendone' }, { name: 'Hemant Shrivastava', description: "Rigved has worked with me as full time developer for over eight months; <span class='color-white'>he is enthusiastic about technology and always ready for new challenges. He is a person that you can rely on</span>, and I highly recommend him.", imgPath: hemant, designation: 'Founder at Sociocharge' }, { name: 'Simon Santosh', description: "Rigved has worked with me as full time developer for over eight months; <span class='color-white'>he is enthusiastic about technology and always ready for new challenges. He is a person that you can rely on</span>, and I highly recommend him.", imgPath: santosh, designation: 'UI/UX Designer' }]
 
 
-export const socialMediaHandles = [{ name: 'Linkedin', imgPath: linkedinLogo, link: '#' }, { name: 'Github', imgPath: GithubLogo, link: '#' }, { name: 'Instagram', imgPath: instagramLogo, link: '#' }]
+export const socialMediaHandles = [{ name: 'Linkedin', imgPath: linkedinLogo, link: 'https://www.linkedin.com/in/rigved-shrivastava-7055671a5/' }, { name: 'Github', imgPath: GithubLogo, link: 'https://github.com/Rigved29' }, { name: 'Instagram', imgPath: instagramLogo, link: '#' }]

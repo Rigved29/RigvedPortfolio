@@ -15,7 +15,7 @@ const Footer = () => {
                     <div className="mt-20 d-flex g-10 jc-center">
                         {socialMediaHandles.map((account) => {
                             return (
-                                <a href={account.link}>
+                                <a href={account.link} target="_blank">
                                     <Image alt={account.name} src={account.imgPath} width={32} height={32} className="cursor-pointer" />
                                 </a>
                             )

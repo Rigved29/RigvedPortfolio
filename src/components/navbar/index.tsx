@@ -1,5 +1,5 @@
 import Hamburger from "./hamburger";
-
+import { GoDesktopDownload } from "react-icons/go";
 
 const Navbar = () => {
 
@@ -9,7 +9,7 @@ const Navbar = () => {
                 <Hamburger />
                 <p className="font-weight-700">Rigved<br />Shrivastava <span className="color-yellow font-weight-700">.</span></p>
             </div>
-            <a href="#" download className="download-btn">RESUME</a>
+            <a href="/assets/resume/Resume2024.pdf" download="Rigved_Resume" className="download-btn" ><GoDesktopDownload className="icon" /> <span className="text">RESUME</span></a>
         </nav>
     )
 
