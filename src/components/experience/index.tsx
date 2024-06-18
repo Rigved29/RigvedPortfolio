@@ -3,6 +3,7 @@ import { companies } from "@/constants";
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import { useState } from "react";
+import SectionWrapper from "../common/sectionWrapper";
 
 
 
@@ -41,13 +42,13 @@ const Experience = () => {
     }
 
     return (
-        <section className="p-block-60 p-inline-6rem">
+        <SectionWrapper classes="p-block-60 p-inline-6rem">
             <h1 className="heading2 text-center">I'm proud to have collaborated with some <br />awesome companies</h1>
             {/* <p className="text-center heading3 margin-block-20">I'm proud to have collaborated with some awesome companies:</p> */}
             <div className="companiesDiv">
                 {companies.map((company, i) => <CompanyLogo company={company} idx={i} handleHover={handleHover} />)}
             </div>
-        </section>
+        </SectionWrapper>
     )
 
 }

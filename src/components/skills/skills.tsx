@@ -3,6 +3,7 @@ import { SKILLS } from "@/constants";
 import { FaLaptopCode } from "react-icons/fa6";
 import { BsTerminalFill } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
+import SectionWrapper from "../common/sectionWrapper";
 
 
 const SkillsBox = ({ category, skills, icon }: { category: string, skills: string[], icon: any }) => {
@@ -25,7 +26,7 @@ const SkillsSection = () => {
 
 
     return (
-        <section className="p-block-60 p-inline-6rem">
+        <SectionWrapper classes="p-block-60 p-inline-6rem">
             <h1 className="heading2 text-center">Skills</h1>
             <div className="margin-block-30 d-flex jc-space-between g-20 flex-wrap">
                 <BlurredBgBox classes="w-30per" children={<SkillsBox category='Front-End Development' skills={SKILLS['frontend']} icon={<CgWebsite />} />} />
@@ -33,7 +34,7 @@ const SkillsSection = () => {
                 <BlurredBgBox classes="w-30per" children={<SkillsBox category='Tools' skills={SKILLS['tools']} icon={<CgWebsite />} />} />
                 {/* <BlurredBgBox classes="w-25per" children={<SkillsBox category='Learning' skills={SKILLS['learning']} />} /> */}
             </div>
-        </section>
+        </SectionWrapper>
     )
 }
 

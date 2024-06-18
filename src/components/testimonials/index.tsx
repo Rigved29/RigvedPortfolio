@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { testimonials } from '../../constants';
 import TestimonialCard from './testimonialCard';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+import SectionWrapper from '../common/sectionWrapper';
 
 const Testimonial = () => {
     const [testimonialsData, setTestimonialsData] = useState(testimonials);
@@ -54,7 +55,7 @@ const Testimonial = () => {
 
     return (
 
-        <section className="p-block-60">
+        <SectionWrapper classes="p-block-60">
             <h1 className="heading2 text-center color-yellow ">Testimonial</h1>
             <div className='d-flex margin-block-60 g-20 jc-center'>
                 {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={i + 1} />)}
@@ -63,7 +64,7 @@ const Testimonial = () => {
                 <span className='br-50per p-10 bg-StoneBlue' onClick={() => handleCurrentCard('left')}><FaArrowLeft /></span>
                 <span className='br-50per p-10 bg-StoneBlue' onClick={() => handleCurrentCard('right')}><FaArrowRight /></span>
             </div>
-        </section>
+        </SectionWrapper>
 
     )
 

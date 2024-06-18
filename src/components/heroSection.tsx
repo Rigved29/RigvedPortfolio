@@ -3,6 +3,7 @@
 import { primaryYellow } from "@/constants";
 import { addAnnotation } from "@/helpers";
 import { useEffect, useRef } from "react";
+import SectionWrapper from "./common/sectionWrapper";
 
 
 const HeroSection = () => {
@@ -15,7 +16,7 @@ const HeroSection = () => {
 
 
     return (
-        <section>
+        <SectionWrapper>
             <div className="text-center line-height-large h-300">
                 <div className="heading1">
                     <h1>Hey, It's Rigved.</h1>
@@ -25,7 +26,7 @@ const HeroSection = () => {
                 <button className="squareBtn margin-block-30 bg-yellow color-black font-weight-700">Explore</button>
             </div>
 
-        </section>
+        </SectionWrapper>
     )
 }
 

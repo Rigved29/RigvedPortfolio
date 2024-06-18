@@ -109,7 +109,7 @@
 .blurredbgBox {
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: rgba(128, 128, 128, 0.3);
+    background: rgba(40, 37, 37, 0.3);
     padding: 10px;
 }
 
@@ -539,31 +539,41 @@
     padding: 0px 10px;
     cursor: pointer;
     border: none;
-    transition: width 0.3s ease;
+    transition: width 0.2s ease-in;
     width: 40px;
     border: 2px solid var(--PrimaryYellow);
     color: var(--PrimaryYellow);
     height: 40px;
+
+    .icon {
+        font-size: 1rem;
+    }
+
+    .text {
+        margin-left: 10px;
+        translate: 200px 0px;
+        display: none;
+        white-space: nowrap;
+        transition: translate 0.5s ease 2s;
+    }
 }
 
 
-.download-btn .text {
-    margin-left: 10px;
-    translate: 200px 0px;
-    display: none;
-    white-space: nowrap;
-    transition: translate 0.3s ease;
-}
 
 .download-btn:hover {
     width: 110px;
     height: 40px;
+
+    .icon {
+        font-size: 1rem;
+    }
+
+    .text {
+        display: inline;
+        translate: 0px 0px;
+    }
 }
 
-.download-btn:hover .text {
-    display: inline-flex;
-    translate: 0px 0px;
-}
 
 @media only screen and (max-width: 1024px) {
     .companiesDiv {
@@ -694,13 +704,14 @@
     left: 75px;
     top: 20px;
     border-radius: 5px;
-    color: var(--BrightYellow);
+
 
     li {
         list-style-type: none;
         font-size: 1rem;
         font-weight: 500;
         margin-block: 15px;
+        color: var(--BrightYellow);
         cursor: pointer;
     }
 }
