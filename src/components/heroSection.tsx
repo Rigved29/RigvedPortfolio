@@ -3,7 +3,9 @@
 import { primaryYellow } from "@/constants";
 import { addAnnotation } from "@/helpers";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import SectionWrapper from "./common/sectionWrapper";
+import avtarImg from '../../public/assets/avatar.png';
 
 
 const HeroSection = () => {
@@ -17,7 +19,8 @@ const HeroSection = () => {
 
     return (
         <SectionWrapper>
-            <div className="text-center line-height-large h-300">
+            <div className="text-center line-height-large h-500">
+                <Image src={avtarImg} alt='avatar-img' width={200} height={200} className="br-50per" />
                 <div className="heading1">
                     <h1>Hey, It's Rigved.</h1>
                     <h1>MERN Stack Developer</h1>

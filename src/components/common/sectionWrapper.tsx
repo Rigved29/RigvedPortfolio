@@ -4,10 +4,10 @@ interface secPropTypes {
     children: React.ReactNode
 }
 
-const SectionWrapper = ({ classes, children }: secPropTypes) => {
+const SectionWrapper = ({ classes = '', children }: secPropTypes) => {
 
     return (
-        <section className={classes}>
+        <section className={`secWrapper ${classes}`}>
             {children}
         </section>
     )
