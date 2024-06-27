@@ -18,9 +18,9 @@ const HeroSection = () => {
 
 
     return (
-        <SectionWrapper>
+        <section>
             <div className="text-center line-height-large h-500">
-                <Image src={avtarImg} alt='avatar-img' width={200} height={200} className="br-50per" />
+                <Image src={avtarImg} alt='avatar-img' width={200} height={200} className="br-50per avatarImg" />
                 <div className="heading1">
                     <h1>Hey, It's Rigved.</h1>
                     <h1>MERN Stack Developer</h1>
@@ -29,7 +29,7 @@ const HeroSection = () => {
                 <button className="squareBtn margin-block-30 bg-yellow color-black font-weight-700">Explore</button>
             </div>
 
-        </SectionWrapper>
+        </section>
     )
 }
 
