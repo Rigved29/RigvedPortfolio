@@ -1,6 +1,7 @@
 import './globals.css'
 import '../common.scss';
 import { Space_Grotesk } from 'next/font/google'
+import { Toaster } from 'sonner';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
@@ -35,6 +36,11 @@ export default function Layout({
         <Navbar />
         {children}
         <Footer />
+        <Toaster richColors toastOptions={{
+          style: {
+            padding: '10px',
+          }
+        }} />
       </body>
     </html>
   )

@@ -175,6 +175,10 @@
     padding-block: 90px;
 }
 
+.p-5 {
+    padding: 5px;
+}
+
 .p-10 {
     padding: 10px;
 }
@@ -296,6 +300,10 @@
     @include customWidth(100px);
 }
 
+.w-140 {
+    @include customWidth(140px);
+}
+
 .w-600 {
     @include customWidth(600px)
 }
@@ -307,6 +315,10 @@
 
 
 //height
+
+.h-30 {
+    height: 30px;
+}
 
 .h-300 {
     height: 300px;
@@ -410,6 +422,10 @@
 }
 
 //border
+
+.no-border {
+    border: none;
+}
 
 .br-50per {
     border-radius: 50%;
@@ -659,16 +675,22 @@
     user-select: none;
 }
 
+.selectBtn-checked {
+    @extend .selectBtn;
+    background-color: var(--PrimaryWhite);
+    color: var(--DarkBlue);
+}
+
 .selectBtn input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-.selectBtn input[type="checkbox"]:checked+span {
-    background-color: #007bff;
-    color: white;
-}
+// .selectBtn input[type="checkbox"]:checked+span {
+//     background-color: #007bff;
+//     color: white;
+// }
 
 .selectBtn span {
     display: inline-block;
@@ -796,5 +818,50 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+.loader {
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+}
+
+.loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 3px solid var(--DarkBlue);
+    animation: prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes prixClipFix {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
     }
 }
