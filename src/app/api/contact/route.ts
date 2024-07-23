@@ -1,12 +1,21 @@
+import { NextRequest, NextFetchEvent } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export async function POST(req: any, res: any) {
 
-    const data = await req.json()
 
-    const { email, name, message } = data;
+export async function POST(req: NextRequest, res: any) {
 
-    console.log('line5', email, name, message);
+    // !In case of sending formData in body, no need to use req.json(); it will give error. Retrieve data using req.formData()
+    const data: any = await req.formData();
+
+    const emailData: any = {};
+
+
+    for (const key of data.keys()) {
+        emailData[key] = data.get(key);
+    }
+
+    const { email, name, message, interestedIn, file } = emailData;
 
 
     // Configure the SMTP transporter
@@ -23,7 +32,7 @@ export async function POST(req: any, res: any) {
         from: email,
         to: 'rigved.shrivastava232@gmail.com', // Replace with your email
         subject: 'New Contact Us Message',
-        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\nInterested in:\n${interestedIn}`,
         replyTo: email,
     };
 
@@ -37,7 +46,5 @@ export async function POST(req: any, res: any) {
     }
 
 
-
-    // return new Response(JSON.stringify({ message: `Hello, world`, status: 200 }))
 
 }
