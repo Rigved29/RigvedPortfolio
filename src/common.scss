@@ -45,11 +45,22 @@
     margin-block: 5px;
 }
 
+.heading1Mob {
+    @extend .heading1;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
 .heading2 {
     font-size: 2rem;
     font-weight: 500;
     line-height: normal;
     margin-block: 5px;
+}
+
+.heading2Mob {
+    @extend .heading2;
+    font-size: 1rem;
 }
 
 .heading3 {
@@ -143,6 +154,10 @@
     margin-bottom: 30px;
 }
 
+.mb-400 {
+    margin-bottom: 400px;
+}
+
 .margin-right-20 {
     margin-right: 20px;
 }
@@ -197,6 +212,18 @@
 
 .p-inline-6rem {
     padding-inline: 6rem;
+}
+
+.p-inline-2rem {
+    padding-inline: 2rem;
+}
+
+.p-inline-1rem {
+    padding-inline: 1rem;
+}
+
+.p-top-20 {
+    padding-top: 20px;
 }
 
 //bg
@@ -290,6 +317,10 @@
 
 .w-100per {
     width: 100%;
+}
+
+.w-90per {
+    width: 90%;
 }
 
 .w-200 {
@@ -419,6 +450,10 @@
 
 .ColsRows-2 {
     @include repeatColsRows(2, 2);
+}
+
+.ColsRows-1 {
+    @include repeatColsRows(1, 1);
 }
 
 //border
@@ -643,6 +678,19 @@
     /* Adjust the scale value as needed */
 }
 
+.projectCardParentMob {
+    @extend .projectCardParent;
+    height: 200px;
+    width: 90%;
+    margin-inline: 20px;
+}
+
+.projectCardMob {
+    @extend .projectCard;
+    height: 200px;
+    width: 100%;
+}
+
 .testimonialCard {
     width: 400px;
     height: auto;
@@ -659,6 +707,18 @@
     @extend .testimonialCard;
     z-index: 999;
     scale: 1.2;
+}
+
+.testimonialCardMob {
+    width: 100%;
+    height: auto;
+    background-color: var(--GrayishBlack);
+    color: var(--LightGrey);
+    border: 2px solid var(--DarkGrey);
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 1.3;
+    position: absolute;
 }
 
 .inputClass {
@@ -791,6 +851,11 @@
 
 .ribbon-red {
     @include ribbon(var(--Red))
+}
+
+.ribbon-red-mob {
+    @extend .ribbon-yellow;
+    height: 600px;
 }
 
 .secWrapper {

@@ -6,9 +6,10 @@ interface projectCardTypes {
     name: string;
     description: string;
     link: string;
+    isMobile: boolean;
 }
 
-const ProjectCard = ({ imagePath, name, description, link }: projectCardTypes) => {
+const ProjectCard = ({ imagePath, name, description, link, isMobile }: projectCardTypes) => {
 
     const handleRedirect = useCallback((link: string) => {
         window.open(link, '_blank');
@@ -16,8 +17,8 @@ const ProjectCard = ({ imagePath, name, description, link }: projectCardTypes) =
 
     return (
         <div>
-            <div className="projectCardParent" onClick={() => handleRedirect(link)}>
-                <div className="projectCard" style={{ backgroundImage: `url(${imagePath?.src})` }}>
+            <div className={`${isMobile ? 'projectCardParentMob' : 'projectCardParent'}`} onClick={() => handleRedirect(link)}>
+                <div className={isMobile ? 'projectCardMob' : 'projectCard'} style={{ backgroundImage: `url(${imagePath?.src})` }}>
                     <span>{name}</span>
                 </div>
             </div>

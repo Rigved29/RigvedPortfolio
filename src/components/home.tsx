@@ -34,7 +34,7 @@ const HomeComp = () => {
 
 
     return (
-        <main className="p-block-6rem">
+        <main className="p-block-6rem w-100per">
             <HeroSection />
             <SkillsSection />
             <Experience />

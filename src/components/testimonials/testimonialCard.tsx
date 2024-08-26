@@ -7,13 +7,14 @@ interface testimonialpropsTypes {
     designation: string;
     current: number;
     idx: number;
+    isMobile: boolean;
 }
 
-const TestimonialCard = ({ description, imgPath, name, designation, current, idx }: testimonialpropsTypes) => {
+const TestimonialCard = ({ description, imgPath, name, designation, current, idx, isMobile }: testimonialpropsTypes) => {
 
     return (
 
-        <div className={`testimonialCard ${idx === current ? 'scaleUp' : ''}`}>
+        <div className={`${isMobile ? 'testimonialCardMob' : 'testimonialCard'} ${idx === current ? 'scaleUp' : ''}`} style={isMobile ? { transform: `translateX(${(idx - 1) * 100}%)` } : {}}>
             <div className="mb-30">
                 <p dangerouslySetInnerHTML={{ __html: description }} />
             </div>
