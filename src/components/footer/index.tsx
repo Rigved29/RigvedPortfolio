@@ -1,15 +1,16 @@
+'use client'
 import { socialMediaHandles } from "@/constants";
 import { useMediaQuery } from "@/customHooks/useMediaHook";
 import Image from "next/image";
 
 const Footer = () => {
 
-    // const isMobile = useMediaQuery('(max-width: 550px)');
+    const isMobile = useMediaQuery('(max-width: 550px)');
 
     return (
         <footer className=" h-max-250 overflow-hidden">
             {/* <div className="ribbon-red"> */}
-            <div className={'ribbon-yellow'}>
+            <div className={isMobile ? 'ribbon-yellow-mob' : 'ribbon-yellow'}>
                 <div className="w-30per margin-block-30 margin-inline-auto d-flex flex-d-col jc-center text-center">
                     <div className="text-left margin-inline-auto">
                         <p>Rigved</p>

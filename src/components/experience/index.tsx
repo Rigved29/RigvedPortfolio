@@ -40,7 +40,7 @@ const Experience = () => {
 
     const handleHover = (name: string, currentCompany: boolean) => {
         if (currentCompany) {
-            console.log('line8', name);
+            // console.log('line8', name);
         }
     }
 

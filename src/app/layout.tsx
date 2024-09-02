@@ -17,7 +17,6 @@ export default function Layout({
 }: {
   children: React.ReactNode
 }) {
-  console.log('line18')
   return (
     <html lang="en">
       <head>

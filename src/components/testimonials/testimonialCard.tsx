@@ -14,7 +14,7 @@ const TestimonialCard = ({ description, imgPath, name, designation, current, idx
 
     return (
 
-        <div className={`${isMobile ? 'testimonialCardMob' : 'testimonialCard'} ${idx === current ? 'scaleUp' : ''}`} style={isMobile ? { transform: `translateX(${(idx - 1) * 100}%)` } : {}}>
+        <div className={`${isMobile ? 'testimonialCardMob' : 'testimonialCard'} ${idx === current && !isMobile ? 'scaleUp' : ''}`} style={isMobile ? { transform: `translateX(${(idx - 1) * 110}%)` } : {}}>
             <div className="mb-30">
                 <p dangerouslySetInnerHTML={{ __html: description }} />
             </div>

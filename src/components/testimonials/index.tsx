@@ -10,7 +10,7 @@ import { useMediaQuery } from '@/customHooks/useMediaHook';
 const Testimonial = () => {
     const [testimonialsData, setTestimonialsData] = useState(testimonials);
     const [current, setCurrent] = useState(2);
-    const [mobCurrent, setMobCurrent] = useState(1);
+    const [mobCurrent, setMobCurrent] = useState(0);
     const isMobile = useMediaQuery('(max-width: 550px)');
 
 
@@ -18,7 +18,17 @@ const Testimonial = () => {
 
         if (isMobile) {
 
-            setCurrent((curr) => curr + 1);
+            if (type === 'left') {
+                if (mobCurrent === testimonialsData.length - 1) {
+                    return;
+                }
+                setMobCurrent((curr) => curr + 1);
+            } else if (type === 'right') {
+                if (mobCurrent === 0) {
+                    return;
+                }
+                setMobCurrent((curr) => curr - 1);
+            }
 
         } else {
 
@@ -76,12 +86,12 @@ const Testimonial = () => {
                     {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={i + 1} isMobile={isMobile} />)}
                 </div> :
                 <div className='pos-relative margin-block-60 g-20'>
-                    {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={i + 1} isMobile={isMobile} />)}
+                    {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={(i + 1) - mobCurrent} isMobile={isMobile} />)}
                 </div>
             }
-            <div className='d-flex g-5 jc-center cursor-pointer' style={(isMobile ? { position: 'absolute', top: '500px', left: '40%' } : {})}>
-                <span className='br-50per p-10 bg-StoneBlue' onClick={() => handleCurrentCard('left')}><FaArrowLeft /></span>
-                <span className='br-50per p-10 bg-StoneBlue' onClick={() => handleCurrentCard('right')}><FaArrowRight /></span>
+            <div className='d-flex g-5 jc-center' style={(isMobile ? { position: 'absolute', top: '500px', left: '40%' } : {})}>
+                <span className='br-50per p-10 bg-StoneBlue cursor-pointer' onClick={() => handleCurrentCard('left')}><FaArrowLeft /></span>
+                <span className='br-50per p-10 bg-StoneBlue cursor-pointer' onClick={() => handleCurrentCard('right')}><FaArrowRight /></span>
             </div>
         </SectionWrapper>
 
