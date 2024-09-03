@@ -17,9 +17,9 @@ const Footer = () => {
                         <p>Shrivastava.</p>
                     </div>
                     <div className="mt-20 d-flex g-10 jc-center">
-                        {socialMediaHandles.map((account) => {
+                        {socialMediaHandles.map((account, i) => {
                             return (
-                                <a href={account.link} target="_blank">
+                                <a href={account.link} target="_blank" key={`${i}-${Math.random()}`}>
                                     <Image alt={account.name} src={account.imgPath} width={32} height={32} className="cursor-pointer" />
                                 </a>
                             )

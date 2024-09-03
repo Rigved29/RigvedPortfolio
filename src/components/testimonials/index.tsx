@@ -83,10 +83,10 @@ const Testimonial = () => {
             <h1 className="heading2 text-center color-yellow ">Testimonial</h1>
             {!isMobile ?
                 <div className='d-flex margin-block-60 g-20 jc-center'>
-                    {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={i + 1} isMobile={isMobile} />)}
+                    {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={i + 1} isMobile={isMobile} key={`${i}-${Math.random()}`} />)}
                 </div> :
                 <div className='pos-relative margin-block-60 g-20'>
-                    {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={(i + 1) - mobCurrent} isMobile={isMobile} />)}
+                    {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={(i + 1) - mobCurrent} isMobile={isMobile} key={`${i}-${Math.random()}`} />)}
                 </div>
             }
             <div className='d-flex g-5 jc-center' style={(isMobile ? { position: 'absolute', top: '500px', left: '40%' } : {})}>

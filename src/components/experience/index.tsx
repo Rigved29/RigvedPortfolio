@@ -49,7 +49,7 @@ const Experience = () => {
             <h1 className={isMobile ? 'heading2Mob text-center' : 'heading2 text-center'}>I'm proud to have collaborated with some <br />awesome companies</h1>
             {/* <p className="text-center heading3 margin-block-20">I'm proud to have collaborated with some awesome companies:</p> */}
             <div className={`companiesDiv ${isMobile ? 'p-top-20 ' : ''}`}>
-                {companies.map((company, i) => <CompanyLogo company={company} idx={i} handleHover={handleHover} isMobile={isMobile} />)}
+                {companies.map((company, i) => <CompanyLogo company={company} idx={i} handleHover={handleHover} isMobile={isMobile} key={`${i}-${Math.random()}`} />)}
             </div>
         </SectionWrapper>
     )

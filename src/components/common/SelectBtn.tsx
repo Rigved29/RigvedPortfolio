@@ -1,7 +1,7 @@
 import { useState, useEffect, memo } from "react";
 
 
-const SelectBtn = memo(({ name, value, inputGrp, register, interestedIn }: any) => {
+function SelectBtn({ name, value, inputGrp, register, interestedIn }: any) {
 
     const [checked, setChecked] = useState(false);
 
@@ -24,6 +24,6 @@ const SelectBtn = memo(({ name, value, inputGrp, register, interestedIn }: any) 
         </label>
     )
 
-})
+}
 
 export default SelectBtn;

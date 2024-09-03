@@ -14,7 +14,7 @@ const Works = () => {
                 <h1 className={`${isMobile ? 'heading1Mob' : 'heading1'}`}>My Beautiful <br /> Works</h1>
             </div>
             <div className={`d-grid ${isMobile ? 'ColsRows-1 w-100per' : 'ColsRows-2  w-600'} p-block-60 g-20 margin-inline-auto`}>
-                {projects.map((project) => <ProjectCard imagePath={project.path} name={project.name} description={project.description} link={project.link} isMobile={isMobile} />)}
+                {projects.map((project, i) => <ProjectCard imagePath={project.path} name={project.name} description={project.description} link={project.link} isMobile={isMobile} key={`${i}-${Math.random()}`} />)}
             </div>
         </SectionWrapper>
     )
