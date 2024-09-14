@@ -17,6 +17,7 @@ export default function Layout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <head>
@@ -26,13 +27,12 @@ export default function Layout({
         <meta name="keywords" content="Rigved Shrivastava, Rigved, Frontend Developer, Frontend, Frontend Development, Full Stack Developer, MERN Stack Developer" />
         <meta property="og:title" content="Rigved portfolio" />
         <meta property="og:description" content="A portfolio website of Frontend Developer Rigved Shrivastava" />
+        <link rel="icon" href="/assets/RS_logo.png" />
         {/* <meta property="og:image" content="image_url_here" /> */}
-        {/* <link rel="icon" href="path/to/favicon.ico" /> */}
         {/* <link rel="canonical" href="https://www.example.com/your-page"> */}
       </head>
 
       <body className={SpaceGrotesk.className}>
-        <Navbar />
         {children}
         <Footer />
         <Toaster richColors toastOptions={{

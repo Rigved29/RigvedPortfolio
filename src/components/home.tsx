@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Experience from "../components/experience/index";
 import HeroSection from "./heroSection"
 import Navbar from "./navbar";
@@ -9,6 +9,13 @@ import Works from "./works";
 import Contact from "./contact";
 
 const HomeComp = () => {
+    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+
+    const handleSidebarClose = () => {
+        if (isSidebarOpen) {
+            setIsSidebarOpen(false)
+        }
+    }
 
     useEffect(() => {
 
@@ -34,13 +41,16 @@ const HomeComp = () => {
 
 
     return (
-        <main className="p-block-6rem w-100per">
-            <HeroSection />
-            <SkillsSection />
-            <Experience />
-            <Works />
-            <Testimonial />
-            <Contact />
+        <main className="p-bottom-6rem w-100per">
+            <Navbar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} handleSidebarClose={handleSidebarClose} />
+            <section onClick={() => handleSidebarClose()}>
+                <HeroSection />
+                <SkillsSection />
+                <Experience />
+                <Works />
+                <Testimonial />
+                <Contact />
+            </section>
         </main>
     )
 

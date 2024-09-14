@@ -7,7 +7,10 @@ interface hamburgerProptypes {
 const Hamburger = ({ toggleSidebar, isSidebarOpen }: hamburgerProptypes) => {
 
     return (
-        <div className="hamburger" onClick={toggleSidebar}>
+        <div className="hamburger" onClick={(e) => {
+            e.stopPropagation();
+            toggleSidebar();
+        }}>
             <div className={isSidebarOpen ? "cross-line" : 'hamburger-line'}></div>
             <div className={isSidebarOpen ? "cross-line" : 'hamburger-line'}></div>
         </div>
