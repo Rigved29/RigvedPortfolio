@@ -8,13 +8,14 @@ import SectionWrapper from "./common/sectionWrapper";
 import { useMediaQuery } from "@/customHooks/useMediaHook";
 import avtarImg from '../../public/assets/avatar.png';
 
+interface HeroProps {
+    scrollToCompanies: () => void
+}
 
-const HeroSection = () => {
+const HeroSection = ({ scrollToCompanies }: HeroProps) => {
 
     const spanRef = useRef<any>(null);
     const isMobile = useMediaQuery('(max-width: 550px)');
-
-    console.log('line17', isMobile);
 
     useEffect(() => {
         // addAnnotation(spanRef.current, 'highlight', primaryYellow)
@@ -30,7 +31,7 @@ const HeroSection = () => {
                     <h1>MERN Stack Developer</h1>
                 </div>
                 <p className={isMobile ? 'font-size-14' : ''}>I've been working as a <span ref={spanRef}>Frontend Developer</span> for 2+ years.<br />I am based on India</p>
-                <button className="squareBtn margin-block-30 bg-yellow color-black font-weight-700">Explore</button>
+                <button className="squareBtn margin-block-30 bg-yellow color-black font-weight-700" onClick={scrollToCompanies}>Explore</button>
             </div>
 
         </section>

@@ -30,7 +30,7 @@ const SkillsSection = () => {
 
     return (
         <SectionWrapper classes={isMobile ? 'p-inline-2rem' : 'p-block-60 p-inline-6rem'}>
-            <h1 className="heading2 text-center">Skills</h1>
+            <h1 id="skillSec" className="heading2 text-center">Skills</h1>
             <div className={`margin-block-30 d-flex jc-space-between g-20 flex-wrap ${isMobile ? 'flex-d-col align-items-center' : 'flex-d-row'}`}>
                 <BlurredBgBox classes={isMobile ? "w-100per" : 'w-30per'}>
                     <SkillsBox category='Front-End Development' skills={SKILLS['frontend']} icon={<CgWebsite />} />

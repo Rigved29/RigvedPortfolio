@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Experience from "../components/experience/index";
 import HeroSection from "./heroSection"
 import Navbar from "./navbar";
@@ -10,6 +10,7 @@ import Contact from "./contact";
 
 const HomeComp = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+    const companiesRef = useRef<any>(null);
 
     const handleSidebarClose = () => {
         if (isSidebarOpen) {
@@ -39,14 +40,22 @@ const HomeComp = () => {
 
     }, [])
 
+    const scrollToCompanies = () => {
+
+        if (companiesRef?.current) {
+            companiesRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+
+    }
+
 
     return (
         <main className="p-bottom-6rem w-100per">
             <Navbar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} handleSidebarClose={handleSidebarClose} />
             <section onClick={() => handleSidebarClose()}>
-                <HeroSection />
+                <HeroSection scrollToCompanies={scrollToCompanies} />
                 <SkillsSection />
-                <Experience />
+                <Experience companiesRef={companiesRef} />
                 <Works />
                 <Testimonial />
                 <Contact />
