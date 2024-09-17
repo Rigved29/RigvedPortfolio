@@ -82,7 +82,7 @@ const Testimonial = () => {
         <SectionWrapper classes={`p-block-60 p-inline-1rem ${isMobile ? 'mb-400' : ''}`}>
             <h1 className="heading2 text-center color-yellow ">Testimonial</h1>
             {!isMobile ?
-                <div className='d-flex margin-block-60 g-20 jc-center'>
+                <div className='d-flex margin-block-60 g-20 jc-center cardsParent'>
                     {testimonialsData.map((data, i) => <TestimonialCard name={data.name} designation={data.designation} description={data.description} imgPath={data.imgPath} current={current} idx={i + 1} isMobile={isMobile} key={`${i}-${Math.random()}`} />)}
                 </div> :
                 <div className='pos-relative margin-block-60 g-20'>

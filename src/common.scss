@@ -598,40 +598,46 @@
     padding: 0px 10px;
     cursor: pointer;
     border: none;
-    transition: width 0.2s ease-in;
-    width: 40px;
+    transition: width 0.2s ease-in, background-color 0.2s ease-in;
+    width: auto;
     border: 2px solid var(--PrimaryYellow);
     color: var(--PrimaryYellow);
     height: 40px;
 
-    .icon {
-        font-size: 1rem;
-    }
 
-    .text {
-        margin-left: 10px;
-        translate: 200px 0px;
-        display: none;
-        white-space: nowrap;
-        transition: translate 0.5s ease 2s;
-    }
+    // .icon {
+    //     font-size: 1rem;
+    // }
+
+    // .text {
+    //     margin-left: 10px;
+    //     translate: 200px 0px;
+    //     display: none;
+    //     white-space: nowrap;
+    //     transition: translate 0.5s ease 2s;
+    // }
 }
-
-
 
 .download-btn:hover {
-    width: 110px;
-    height: 40px;
-
-    .icon {
-        font-size: 1rem;
-    }
-
-    .text {
-        display: inline;
-        translate: 0px 0px;
-    }
+    border: 2px solid var(--PrimaryYellow);
+    color: var(--PrimaryBlack);
+    background-color: var(--PrimaryYellow);
 }
+
+
+// .download-btn:hover {
+//     width: 110px;
+//     height: 40px;
+
+//     .icon {
+//         font-size: 1rem;
+//     }
+
+//     .text {
+//         display: inline;
+//         translate: 0px 0px;
+//     }
+// }
 
 
 @media only screen and (max-width: 1024px) {
@@ -673,6 +679,7 @@
     font-weight: 500;
     line-height: normal;
     margin-block: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .projectCard:hover {
@@ -693,6 +700,7 @@
     @extend .projectCard;
     height: 200px;
     width: 100%;
+    filter: none;
 }
 
 .testimonialCard {
@@ -706,7 +714,18 @@
     line-height: 1.3;
     z-index: 1;
     scale: 1;
-    transition: z-index 2s ease-in-out, scale 2s ease-in-out, transform 2s ease-in-out;
+    transition: z-index 0.2s ease-in, scale 0.2s ease-in, transform 0.2s ease-in;
+    cursor: pointer;
+}
+
+.cardsParent:hover .testimonialCard {
+    z-index: 1 !important;
+    scale: 1 !important;
+}
+
+.cardsParent .testimonialCard:hover {
+    z-index: 999 !important;
+    scale: 1.2 !important;
 }
 
 .scaleUp {
