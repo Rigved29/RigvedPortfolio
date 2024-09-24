@@ -25,12 +25,15 @@ const CompanyLogo = ({ company, i, handleHover, isMobile }: any) => {
                 //         Currently Working
                 //     </p>
                 // </div>
-                <div className="d-flex align-items-center g-10 jc-center">
+                <div className="d-flex align-items-center g-10 jc-center cursor-pointer compImg">
                     <Image src={company.path} width={isMobile ? "30" : '50'} height={isMobile ? "30" : "50"} alt="Febi.ai" /><span className="font-weight-700 font-size-xl">Febi.ai</span>
                 </div>
             );
+
+        case 'Sociocharge':
+            return <Image alt={company.name} src={company.path} width={isMobile ? 150 : 200} height={50} key={i} className="margin-auto bg-white p-10 br-20 cursor-pointer compImg" />
         default:
-            return (<Image alt={company.name} src={company.path} width={isMobile ? 150 : 200} height={isMobile ? 60 : 110} key={i} className="margin-inline-auto" />)
+            return (<Image alt={company.name} src={company.path} width={isMobile ? 150 : 200} height={isMobile ? 60 : 110} key={i} className="margin-inline-auto cursor-pointer compImg" />)
     }
 }
 

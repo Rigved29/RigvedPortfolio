@@ -1,7 +1,7 @@
 import febiLogo from '../public/assets/Febi_logo.png';
 import frontendoneLogo from '../public/assets/frontendoneLogo.svg';
 import intellemoLogo from '../public/assets/intellemoLogo.svg';
-import SociochargeLogo from '../public/assets/sociocharge.png';
+import SociochargeLogo from '../public/assets/socioChargeLogo.svg';
 //Projects
 import yourNotes from '../public/assets/projects/yourNotes.jpg';
 import videoChat from '../public/assets/projects/videoChat.jpg';
