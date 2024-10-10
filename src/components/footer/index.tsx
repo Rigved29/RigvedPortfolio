@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className=" h-max-250 overflow-hidden">
             {/* <div className="ribbon-red"> */}
             <div className={isMobile ? 'ribbon-yellow-mob' : 'ribbon-yellow'}>
-                <div className="w-30per margin-block-30 margin-inline-auto d-flex flex-d-col jc-center text-center">
+                <div className={`${isMobile ? 'w-60per' : 'w-30per'} margin-block-30 margin-inline-auto d-flex flex-d-col jc-center text-center`}>
                     <div className="text-left margin-inline-auto">
                         <p>Rigved</p>
                         <p>Shrivastava.</p>
@@ -25,7 +25,7 @@ const Footer = () => {
                             )
                         })}
                     </div>
-                    <div className="text-left margin-inline-auto">
+                    <div className="text-center margin-inline-auto">
                         <p className="color-yellow mt-20">Keep It Simple.</p>
                     </div>
                 </div>

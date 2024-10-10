@@ -30,7 +30,7 @@ const HeroSection = ({ scrollToCompanies }: HeroProps) => {
                     <h1>Hey, It's Rigved.</h1>
                     <h1>Software Developer</h1>
                 </div>
-                <p className={isMobile ? 'font-size-14' : ''}>I've been working as a <span ref={spanRef}>Frontend Developer</span> for 2.5+ years.<br />I am based on India.</p>
+                <p className={isMobile ? 'font-size-12' : ''}>I've been working as a <span ref={spanRef}>Frontend Developer</span> for 2.5+ years.<br /><span className={`${isMobile ? 'd-none' : ''}`}>I am based on India.</span></p>
                 <button className="squareBtn margin-block-30 bg-yellow color-black font-weight-700" onClick={scrollToCompanies}>Explore</button>
             </div>
 
