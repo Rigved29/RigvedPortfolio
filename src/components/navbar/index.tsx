@@ -24,7 +24,7 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, handleSidebarClose }: navProp
                 <Hamburger toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
                 <p className="font-weight-700 margin-left-5">Rigved<br />Shrivastava <span className="color-yellow font-weight-700">.</span></p>
             </div>
-            <a href="/assets/resume/Resume2024.pdf" download="Rigved_Resume" className="download-btn" >
+            <a href="/assets/resume/Rigved_Resume_SDE.pdf" download="Rigved_Resume" className="download-btn" >
                 {/* <GoDesktopDownload className="icon" />  */}
                 <span className="text">RESUME</span></a>
             <Sidebar isSidebarOpen={isSidebarOpen} />

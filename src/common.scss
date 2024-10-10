@@ -95,6 +95,10 @@
     box-shadow: 0 0 20px #e6e15b;
 }
 
+.contactaTag:hover {
+    color: var(--BrightYellow);
+}
+
 
 /* Keyframes for alarming effect */
 @keyframes alarming {
@@ -976,4 +980,20 @@
     100% {
         clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
     }
+}
+
+.translateX_0 {
+    transform: translateX(0);
+}
+
+.translateX_110 {
+    transform: translateX(-110%);
+}
+
+.translateX_220 {
+    transform: translateX(-220%);
+}
+
+.socialIcon:hover {
+    transform: scale(1.3);
 }

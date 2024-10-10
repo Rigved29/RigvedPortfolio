@@ -42,9 +42,10 @@ const HomeComp = () => {
 
     const scrollToCompanies = () => {
 
-        if (companiesRef?.current) {
-            companiesRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
+        window.scrollTo({
+            top: 1000,
+            behavior: 'smooth',
+        });
 
     }
 
@@ -57,7 +58,7 @@ const HomeComp = () => {
                 <SkillsSection />
                 <Experience companiesRef={companiesRef} />
                 <Works />
-                <Testimonial />
+                {/* <Testimonial /> */}
                 <Contact />
             </section>
         </main>
