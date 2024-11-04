@@ -12,7 +12,7 @@ const Footer = () => {
             {/* <div className="ribbon-red"> */}
             <div className={isMobile ? 'ribbon-yellow-mob' : 'ribbon-yellow'}>
                 <div className={`${isMobile ? 'w-60per' : 'w-30per'} margin-block-30 margin-inline-auto d-flex flex-d-col jc-center text-center`}>
-                    <div className="text-left margin-inline-auto">
+                    <div className="text-left margin-inline-auto color-white">
                         <p>Rigved</p>
                         <p>Shrivastava.</p>
                     </div>

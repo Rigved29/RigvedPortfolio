@@ -60,7 +60,7 @@ const Form = () => {
 
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className='p-20 br-10 bg-darkBlue d-flex flex-d-col' encType="multipart/form-data">
+        <form onSubmit={handleSubmit(onSubmit)} className='p-20 br-10 bg-darkBlue d-flex flex-d-col color-white' encType="multipart/form-data">
             <p className='mb-30'>I am Interested in...</p>
             <div className='mt-20 d-flex jc-start g-10'>
                 <SelectBtn value="Frontend" name='Frontend' inputGrp='interestedIn' register={register} interestedIn={formData?.interestedIn} />

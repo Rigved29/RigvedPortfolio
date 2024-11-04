@@ -22,7 +22,7 @@ const ProjectCard = ({ imagePath, name, description, link, isMobile }: projectCa
                     <span>{name}</span>
                 </div>
             </div>
-            <p className="margin-block-20 text-center">{description}</p>
+            <p className="margin-block-20 text-center color-white">{description}</p>
         </div>
     )
 

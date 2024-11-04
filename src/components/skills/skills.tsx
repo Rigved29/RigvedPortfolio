@@ -15,7 +15,7 @@ const SkillsBox = ({ category, skills, icon }: { category: string, skills: strin
                 {icon}
                 <h1 className="color-yellow line-height-normal font-size-large font-weight-500">{category}</h1>
             </div>
-            <ul className="w-100per d-flex flex-wrap g-5 line-height-normal p-left-20">
+            <ul className="w-100per d-flex flex-wrap g-5 line-height-normal p-left-20 color-white">
                 {skills.map((skill: string, i) => <li className="margin-right-20 skills-li" key={`${i}-${Math.random()}`}>{skill}</li>)}
             </ul>
         </div>
@@ -30,7 +30,7 @@ const SkillsSection = () => {
 
     return (
         <SectionWrapper classes={isMobile ? 'p-inline-2rem' : 'p-block-60 p-inline-6rem'}>
-            <h1 id="skillSec" className="heading2 text-center" tabIndex={2}>Skills</h1>
+            <h1 id="skillSec" className="heading2 text-center color-white" tabIndex={2}>Skills</h1>
             <div className={`margin-block-30 d-flex jc-space-between g-20 flex-wrap ${isMobile ? 'flex-d-col align-items-center' : 'flex-d-row'}`}>
                 <BlurredBgBox classes={isMobile ? "w-100per" : 'w-30per'}>
                     <SkillsBox category='Front-End Development' skills={SKILLS['frontend']} icon={<CgWebsite />} />

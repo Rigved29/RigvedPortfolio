@@ -22,7 +22,7 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, handleSidebarClose }: navProp
         <nav className="w-100per p-bottom-6rem p-top-20 p-inline-1rem d-flex jc-space-between" onClick={(e) => handleSidebarClose()}>
             <div className="d-flex g-10 align-items-center">
                 <Hamburger toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
-                <p className="font-weight-700 margin-left-5">Rigved<br />Shrivastava <span className="color-yellow font-weight-700">.</span></p>
+                <p className="font-weight-700 margin-left-5 color-white">Rigved<br />Shrivastava <span className="color-yellow font-weight-700">.</span></p>
             </div>
             <a href="/assets/resume/Rigved_Resume_SDE.pdf" download="Rigved_Resume" className="download-btn" >
                 {/* <GoDesktopDownload className="icon" />  */}
