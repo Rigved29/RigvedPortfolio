@@ -30,9 +30,12 @@ const HeroSection = ({ scrollToCompanies }: HeroProps) => {
                 <Image src={dpImage} alt='avatar-img' width={200} height={200} className="br-50per avatarImg" />
                 <div className={isMobile ? `heading1Mob` : `heading1`}>
                     <h1>Hey, It's Rigved.</h1>
-                    <h1>Software Developer</h1>
+                    <h1>Frontend Developer</h1>
                 </div>
-                <p className={isMobile ? 'font-size-12' : ''}>I've been working as a <span ref={spanRef}>Frontend Developer</span> for 2.5+ years.<br /><span className={`${isMobile ? 'd-none' : ''}`}>I am based on India.</span></p>
+                <p className={isMobile ? 'font-size-12' : ''}>I've been working as a <span ref={spanRef}>Frontend Developer</span> for <span className="font-weight-700 color-lightYellow">3 years.</span><br /></p>
+                {/* <span className={`${isMobile ? 'd-none' : ''}`}>I am based on India.</span> */}
+                {/* <p className={isMobile ? 'font-size-12' : ''}>I bring over <span className="font-weight-700 color-lightYellow">3 years</span> of experience as a  <span ref={spanRef} className="font-weight-700 color-lightYellow">Frontend Developer</span>, building intuitive <br/> and high-performance web applications.
+                </p> */}
                 <button className="squareBtn margin-block-30 bg-yellow color-black font-weight-700" onClick={scrollToCompanies}>Explore</button>
             </div>
 
